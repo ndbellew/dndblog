@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 import logging
-from loggin.handlers import SMTPHandler, RotatingFileHandlers
+from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
 
 app = Flask(__name__)
@@ -23,7 +23,7 @@ if not app.debug:
         if app.config['MAIL_USE_TLS']:
             secure = ()
         mail_handler = SMTPHandler(
-            mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),,
+            mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
             fromaddr='no-reply@'+app.config['MAIL_SERVER'],
             toaddrs=app.config['ADMINS'], subject='Microblog Failure',
             credentials=auth, secure=secure)
