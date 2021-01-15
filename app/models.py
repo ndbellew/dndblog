@@ -52,7 +52,7 @@ class User(UserMixin,db.Model):
 
     def followed_posts(self):
         followed = Post.query.join(
-            follower, (followers.c.followed_id == Post.user_id)).filter(
+            followers, (followers.c.followed_id == Post.user_id)).filter(
                 followers.c.follower_id == self.id).order_by(
                     Post.timestamp.desc())
         own = Post.query.filter_by(user_id=self.id)
