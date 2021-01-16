@@ -4,3 +4,79 @@
 2021-01-13 21:17:45,975 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
 2021-01-13 21:36:35,150 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
 2021-01-13 21:44:48,310 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
+2021-01-14 20:24:41,903 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
+2021-01-14 20:26:06,990 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
+2021-01-14 20:26:10,474 ERROR: Exception on /user/nordicruler07 [GET] [in /home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/nate/dndblog/app/routes.py", line 77, in user
+    return render_template('user.html', user=user, posts=posts, form=form, next_url=next_url, prev_url=prev_url)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/nate/dndblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/nate/dndblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/nate/dndblog/app/templates/user.html", line 33, in block "content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2021-01-14 21:33:00,411 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
+2021-01-14 21:35:27,656 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
+2021-01-14 21:35:47,194 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]
+2021-01-14 21:36:06,436 ERROR: Exception on /user/nordicruler07 [GET] [in /home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/nate/dndblog/app/routes.py", line 77, in user
+    return render_template('user.html', user=user, posts=posts, form=form, next_url=next_url, prev_url=prev_url)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/nate/dndblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/nate/dndblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/nate/dndblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/nate/dndblog/app/templates/user.html", line 33, in block "content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2021-01-14 21:38:36,243 INFO: DnD Blog Startup [in /home/nate/dndblog/app/__init__.py:40]

@@ -64,8 +64,8 @@ def register():
 @app.route('/user/<username>')
 @login_required
 def user(username):
-    if username == current_user.username:
-        return redirect(url_for('index'))
+#    if username == current_user.username:
+#        return redirect(url_for('index'))
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
     posts = user.posts.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
